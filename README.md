@@ -1,17 +1,17 @@
-## TechTalk - Easy Development with Flutter
+# TechTalk - Easy Development with Flutter
 ![latest_release_version][]
 
 This is a demo application for **Easy Development with Flutter** section in **TechTalk - Latest Tech in Android** event.
 
 ![banner]
 
-### Overview
+## Overview
  ![techtalk_demo_app]
 > `techtalk_flutter` is a project made with [Flutter][flutter_dev].
 
 The project should be able to run on any **Flutter** supported platforms ( `iOS` , `Android` , etc... ).
 
-### Install and Run
+## Install and Run
 1. Clone project
 ``` bash
 git clone https://github.com/fueerqan/techtalk-flutter.git
@@ -31,10 +31,10 @@ flutter create .
 flutter run
 ```
 
-### Details
+## Details
 > Will be updated later
 
-### Resources
+## Resources
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app][flutter_first_app]
