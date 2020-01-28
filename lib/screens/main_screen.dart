@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech_talk/screens/stateful_screen.dart';
 
 class MainScreen extends StatelessWidget {
   final _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -29,6 +30,10 @@ class MainScreen extends StatelessWidget {
     );
   }
 
+  void _navigateToScreen(String routeName) {
+    Navigator.of(_scaffoldKey.currentContext).pushNamed(routeName);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +51,7 @@ class MainScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   RaisedButton(
-                    color: Theme.of(context).primaryColor,
+                    color: Colors.green,
                     // Container is used to make the button have custom width and height
                     child: Container(
                       height: 120,
@@ -75,7 +80,8 @@ class MainScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () =>
+                        _navigateToScreen(StatefulScreen.routeName),
                   ),
                 ],
               ),
@@ -85,7 +91,7 @@ class MainScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
                   RaisedButton(
-                    color: Theme.of(context).primaryColor,
+                    color: Colors.orange,
                     // Container is used to make the button have custom width and height
                     child: Container(
                       height: 120,
@@ -101,7 +107,7 @@ class MainScreen extends StatelessWidget {
                     onPressed: () {},
                   ),
                   RaisedButton(
-                    color: Colors.blue,
+                    color: Colors.purple,
                     // Container is used to make the button have custom width and height
                     child: Container(
                       height: 120,
