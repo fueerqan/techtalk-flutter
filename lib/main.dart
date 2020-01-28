@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:tech_talk/providers/cart_provider.dart';
 import 'package:tech_talk/providers/product_provider.dart';
 import 'package:tech_talk/screens/consumer_screen.dart';
 import 'package:tech_talk/screens/main_screen.dart';
@@ -17,6 +18,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider.value(
           value: ProductProvider(),
         ),
+        ChangeNotifierProvider.value(
+          value: CartProvider(),
+        )
       ],
       child: MaterialApp(
         title: 'TechTalk Demo',

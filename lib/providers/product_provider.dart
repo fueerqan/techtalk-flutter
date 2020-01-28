@@ -7,7 +7,7 @@ class ProductProvider with ChangeNotifier {
   List<Product> _productList = DUMMY_PRODUCT;
 
   List<Product> get productList {
-    return _productList;
+    return [..._productList];
   }
 
   void addProduct(Product product) {

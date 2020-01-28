@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:tech_talk/currency_util.dart';
 import 'package:tech_talk/data/product.dart';
+import 'package:tech_talk/providers/cart_provider.dart';
 
 class ProductItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final product = Provider.of<Product>(context, listen: false);
+    final cart = Provider.of<CartProvider>(context, listen: false);
 
     return Card(
       shape: RoundedRectangleBorder(
@@ -54,7 +57,7 @@ class ProductItem extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    product.price,
+                    CurrencyUtil.formatToIDR(product.price),
                     textAlign: TextAlign.end,
                     style: Theme.of(context)
                         .textTheme
@@ -73,7 +76,7 @@ class ProductItem extends StatelessWidget {
               ),
               child: FlatButton(
                 color: Colors.orangeAccent,
-                onPressed: () {},
+                onPressed: () => cart.addToCart(product),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
