@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech_talk/screens/product_list_screen.dart';
 import 'package:tech_talk/screens/stateful_screen.dart';
 
 class MainScreen extends StatelessWidget {
@@ -104,7 +105,8 @@ class MainScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () =>
+                        _navigateToScreen(ProductListScreen.routeName),
                   ),
                   RaisedButton(
                     color: Colors.purple,
