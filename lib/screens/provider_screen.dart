@@ -4,7 +4,7 @@ import 'package:tech_talk/providers/product_provider.dart';
 import 'package:tech_talk/widgets/product_item.dart';
 
 class ProviderScreen extends StatefulWidget {
-  static const routeName = "/product-list";
+  static const routeName = "/provider-page";
 
   @override
   _ProviderScreenState createState() => _ProviderScreenState();
@@ -22,21 +22,20 @@ class _ProviderScreenState extends State<ProviderScreen> {
       appBar: AppBar(
         title: Text("Provider Demo"),
       ),
-      body: Padding(
-          padding: const EdgeInsets.all(16),
-          child: GridView.builder(
-            itemCount: productProvider.productList.length,
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 200,
-              childAspectRatio: 2 / 2.5,
-              crossAxisSpacing: 20,
-              mainAxisSpacing: 20,
-            ),
-            itemBuilder: (ctx, index) => ChangeNotifierProvider.value(
-              value: productProvider.productList[index],
-              child: ProductItem(),
-            ),
-          )),
+      body: GridView.builder(
+        padding: const EdgeInsets.all(16.0),
+        itemCount: productProvider.productList.length,
+        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+          maxCrossAxisExtent: 200,
+          childAspectRatio: 2 / 2.5,
+          crossAxisSpacing: 16,
+          mainAxisSpacing: 16,
+        ),
+        itemBuilder: (ctx, index) => ChangeNotifierProvider.value(
+          value: productProvider.productList[index],
+          child: ProductItem(),
+        ),
+      ),
     );
   }
 }

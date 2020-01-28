@@ -22,41 +22,48 @@ class ProductItem extends StatelessWidget {
               product.imageUrl,
               height: 100,
               fit: BoxFit.cover,
+              width: double.infinity,
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
               product.name,
+              textAlign: TextAlign.center,
               style: Theme.of(context)
                   .textTheme
                   .body2
                   .copyWith(fontWeight: FontWeight.bold),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              Consumer<Product>(
-                builder: (ctx, product, _) => IconButton(
-                  icon: Icon(
-                    (product.isFavorite)
-                        ? Icons.favorite
-                        : Icons.favorite_border,
-                    color: Colors.red,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Consumer<Product>(
+                  builder: (ctx, product, _) => IconButton(
+                    icon: Icon(
+                      (product.isFavorite)
+                          ? Icons.favorite
+                          : Icons.favorite_border,
+                      color: Colors.red,
+                    ),
+                    onPressed: product.toggleFavorite,
                   ),
-                  onPressed: product.toggleFavorite,
                 ),
-              ),
-              Text(
-                product.price,
-                textAlign: TextAlign.end,
-                style: Theme.of(context)
-                    .textTheme
-                    .body2
-                    .copyWith(color: Colors.lightBlue),
-              ),
-            ],
+                Expanded(
+                  child: Text(
+                    product.price,
+                    textAlign: TextAlign.end,
+                    style: Theme.of(context)
+                        .textTheme
+                        .body2
+                        .copyWith(color: Colors.lightBlue),
+                  ),
+                ),
+              ],
+            ),
           ),
           Expanded(
             child: ClipRRect(

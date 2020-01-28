@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech_talk/screens/consumer_screen.dart';
 import 'package:tech_talk/screens/provider_screen.dart';
 import 'package:tech_talk/screens/stateful_screen.dart';
 
@@ -122,7 +123,8 @@ class MainScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () =>
+                        _navigateToScreen(ConsumerScreen.routeName),
                   ),
                 ],
               ),

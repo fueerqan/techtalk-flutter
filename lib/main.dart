@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tech_talk/providers/product_provider.dart';
+import 'package:tech_talk/screens/consumer_screen.dart';
 import 'package:tech_talk/screens/main_screen.dart';
 import 'package:tech_talk/screens/provider_screen.dart';
 import 'package:tech_talk/screens/stateful_screen.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
           '/': (_) => MainScreen(),
           StatefulScreen.routeName: (_) => StatefulScreen(),
           ProviderScreen.routeName: (_) => ProviderScreen(),
+          ConsumerScreen.routeName: (_) => ConsumerScreen(),
         },
       ),
     );
