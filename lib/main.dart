@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tech_talk/providers/product_provider.dart';
 import 'package:tech_talk/screens/main_screen.dart';
-import 'package:tech_talk/screens/product_list_screen.dart';
+import 'package:tech_talk/screens/provider_screen.dart';
 import 'package:tech_talk/screens/stateful_screen.dart';
 
 void main() => runApp(MyApp());
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (_) => MainScreen(),
           StatefulScreen.routeName: (_) => StatefulScreen(),
-          ProductListScreen.routeName: (_) => ProductListScreen(),
+          ProviderScreen.routeName: (_) => ProviderScreen(),
         },
       ),
     );
