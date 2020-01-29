@@ -24,7 +24,7 @@ class _StatefulScreenState extends State<StatefulScreen> {
   @override
   Widget build(BuildContext context) {
     final _doorprizeWidget = [
-      Image.asset("assets/images/doorprize.png"),
+      Image.asset("assets/images/gift.png"),
       Text(
         "Congratulation, you got a Doorprize!",
         style: Theme.of(context).textTheme.body1,
