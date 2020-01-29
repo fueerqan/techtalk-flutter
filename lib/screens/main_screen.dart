@@ -26,7 +26,10 @@ class MainScreen extends StatelessWidget {
           children: <Widget>[
             Icon(Icons.warning),
             SizedBox(width: 10),
-            Text("Staless Widget"),
+            Text(
+              "Stateless Widget",
+              style: Theme.of(_scaffoldKey.currentContext).textTheme.body2,
+            ),
           ],
         ),
         contentPadding: const EdgeInsets.all(16),
