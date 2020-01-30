@@ -3,7 +3,7 @@
 
 This is a demo application for **Easy Development with Flutter** section in **TechTalk - Latest Tech in Android** event.
 
-![banner]
+![banner] 
 
 ## Overview
  ![techtalk_demo_app]
