@@ -1,7 +1,7 @@
 # TechTalk - Easy Development with Flutter
 ![latest_release_version][]
 
-This is a demo application for **Easy Development with Flutter** section in **TechTalk - Latest Tech in Android** event at Tokopedia.
+This is a demo application for **Easy Development with Flutter** section in **TechTalk - Latest Tech in Android** event at ***Tokopedia***.
 
 ![banner] 
 
